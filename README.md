@@ -3,6 +3,7 @@ Automatic binary classification of adverse drug reaction mentioning posts
 link: https://healthlanguageprocessing.org/sharedtask2/
 
 # Data description(additional dataset not used this time):
+We use tweet.py to fetch data from tweet posts
   1. Number of sentences:	6761
   2. Number of sentences of label 0:	6034
   3. Number of sentences of label 1:	727
