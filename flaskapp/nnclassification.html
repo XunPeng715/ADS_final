@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+          crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<center></center>
+<h2>&nbsp&nbspNeural Network predict deliquent status</h2></center>
+<hr>
+<form action="nnclassification" method="post">
+
+    <div align left=10 class="form-group col-lg-3">
+        <b>loan_age :</b> <input type="text" class="form-control"
+                                 placeholder="loan_age" name="loan_age" size="30"
+                                 required="required">
+
+        <br/>
+
+        <b>remaining_months_to_legal_maturity :</b> <input type="text" class="form-control"
+                                                           placeholder="remaining_months_to_legal_maturity"
+                                                           name="remaining_months_to_legal_maturity" size="30"
+                                                           required="required">
+
+        <br/>
+
+        <b>curr_interest_rate :</b> <input type="text" class="form-control"
+                                           placeholder="curr_interest_rate" name="curr_interest_rate" size="30"
+                                           required="required">
+        <br/>
+
+
+        <b>loan_sequence_no :</b> <input type="text" class="form-control"
+                                         placeholder="loan_sequence_no" name="loan_sequence_no" size="30"
+                                         required="required">
+        <br/>
+
+        <b>monthly_reporting_period :</b> <input type="text" class="form-control"
+                                                 placeholder="monthly_reporting_period" name="monthly_reporting_period"
+                                                 size="30"
+                                                 required="required">
+        <br/>
+
+        <b>curr_actual_upb :</b> <input type="text" class="form-control"
+                                        placeholder="curr_actual_upb" name="curr_actual_upb" size="30"
+                                        required="required">
+        <br/>
+        <b>curr_deferred_upb :</b> <input type="text" class="form-control"
+                                          placeholder="curr_deferred_upb"
+                                          name="curr_deferred_upb" size="30" required="required">
+        <br/>
+
+
+        <br/>
+        <center><input class="btn btn-primary" type="submit"/></center>
+    </div>
+</form>
+</body>
+</html>
