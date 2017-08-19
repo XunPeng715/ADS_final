@@ -44,3 +44,28 @@ We use tweet.py to fetch data from tweet posts
 2) Download Google's word embeddings binary file from [https://code.google.com/p/word2vec/](https://code.google.com/archive/p/word2vec/) extract it, and place it under `data/` folder
 3) Using the command in the home directory of this repository
 		`python driver.py`
+
+# MLaaS: Load Exported Model With Standard TensorFlow ModelServer
+First ModelServer package needs to be installed.
+To add TensorFlow Serving distribution URI as a package source:
+```
+echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list
+```
+```
+curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | sudo apt-key add -
+```
+To install and update TensorFlow ModelServer
+```
+sudo apt-get update && sudo apt-get install tensorflow-model-server
+```
+After ModelServer is installed, run this command:
+```
+tensorflow_model_server --port=9001 --model_name=cnn_tweet --model_base_path=/tmp/cnn_tweet_model/
+```
+This command loads the exported model from the disk and exposes a port to serve the service.
+
+# MLaaS: Test the Server
+First, to run Python client code, we can install the tensorflow-serving-api PIP package using:
+```
+pip install tensorflow-serving-api
+```
